@@ -21,6 +21,21 @@
   margin: 0 10px;
   padding: 20px 0;
 }
+.content {
+  display: flex;
+  flex-direction: row;
+  background: #54d454;
+  padding: 5px;
+}
 .welcome {
   background: #29e929;
+  width: 77%;
+  margin: 10px;
+  padding: 0 10px;
+  line-height: 1.5rem;
+}
+.favorite {
+  background: #29e929;
+  width: 23%;
+  margin: 10px;
 }

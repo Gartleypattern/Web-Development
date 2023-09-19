@@ -1,0 +1,23 @@
+.main {
+  width: 1000px;
+  background: gray;
+  margin: 0 auto;
+  height: 100px;
+}
+.header {
+  background: #54d454;
+  margin-bottom: 20px;
+}
+.header-top {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+}
+.nav {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  background: #29e929;
+  margin: 0 10px;
+  padding: 20px 0;
+}

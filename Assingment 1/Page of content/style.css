@@ -18,7 +18,7 @@
   justify-content: space-around;
   flex-direction: row;
   background: #29e929;
-  margin: 0 10px;
+  margin: 10px 10px;
   padding: 20px 0;
 }
 .content {
@@ -38,4 +38,11 @@
   background: #29e929;
   width: 23%;
   margin: 10px;
+}
+
+.footer {
+  background: #54d454;
+  height: 150px;
+  padding: 10px;
+  margin-top: 20px;
 }

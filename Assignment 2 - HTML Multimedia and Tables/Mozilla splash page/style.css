@@ -13,3 +13,12 @@ header {
   justify-content: space-between;
   padding: 10px 20px;
 }
+.article {
+  background: #cccccc;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+.article-text {
+  padding: 10px 20px;
+}

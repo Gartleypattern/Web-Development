@@ -34,3 +34,8 @@ tr:nth-child(odd) td {
 caption {
   padding: 10px;
 }
+
+/* Apply border to the "Name" column group */
+.colgroup .name-column {
+  border: 1px solid #000; /* Add a border around the "Name" column group */
+}

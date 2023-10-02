@@ -63,6 +63,16 @@
 
         <div class="red-panda">
             <!-- insert picture element -->
+            <picture>
+                <!-- Small portrait image for viewports 600px wide or less -->
+                <source media="(max-width: 600px)" srcset="img/red-panda600.jpg">
+
+                <!-- Large landscape image for viewports wider than 600px -->
+                <source media="(min-width: 601px)" srcset="img/red-panda1200.jpg">
+
+                <!-- Default image if no source is supported -->
+                <img src="fallback-panda.jpg" alt="Red Panda">
+            </picture>
         </div>
 
     </main>

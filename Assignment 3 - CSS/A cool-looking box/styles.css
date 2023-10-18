@@ -8,4 +8,14 @@ html {
   width: 200px;
   height: 200px;
   padding: auto;
+  font-size: 1.125rem; /* 18 px/16 px = 1.125 rem */
+  background-color: red;
+  padding: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.text {
+  color: white;
+  text-shadow: 2px 2px 4px black;
 }

@@ -1,13 +1,20 @@
 html {
   font-family: sans-serif;
 }
-
+body {
+  width: 250px;
+  height: 250px;
+  border: 1px solid gray;
+  border-radius: 5px;
+  margin: 50px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 /* Your CSS below here */
 .box {
-  margin: 50px auto;
   width: 200px;
   height: 200px;
-  font-size: 1.125rem; /* 18 px/16 px = 1.125 rem */
   background: linear-gradient(
       45deg,
       rgba(0, 0, 0, 0),
@@ -27,6 +34,7 @@ html {
 }
 
 .text {
+  font-size: 1.125rem; /* 18 px/16 px = 1.125 rem */
   color: white;
   text-shadow: 2px 2px 4px black;
 }

@@ -7,14 +7,25 @@ html {
   margin: 50px auto;
   width: 200px;
   height: 200px;
-  padding: auto;
   font-size: 1.125rem; /* 18 px/16 px = 1.125 rem */
-  background-color: red;
+  background: linear-gradient(
+      45deg,
+      rgba(0, 0, 0, 0),
+      rgba(0, 0, 0, 0.2) 30%,
+      rgba(0, 0, 0, 0.2)
+    ),
+    red; /* Combine the linear gradient and background color */
+  border: 1px solid #990000;
   padding: auto;
   display: flex;
   justify-content: center;
   align-items: center;
+  border-radius: 7px;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3),
+    inset 3px 3px 6px rgba(255, 255, 255, 0.3),
+    inset -3px -3px 6px rgba(0, 0, 0, 0.3);
 }
+
 .text {
   color: white;
   text-shadow: 2px 2px 4px black;

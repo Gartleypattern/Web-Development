@@ -4,10 +4,34 @@
   box-sizing: border-box;
 }
 
+@font-face {
+  font-family: "Lora";
+  src: url("fonts/Lora-Regular.ttf") format("ttf");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Roboto Slab";
+  src: url("fonts/RobotoSlab-Regular.ttf") format("ttf");
+  font-weight: 400;
+  font-style: normal;
+}
+
 body {
   margin: 0 auto;
   min-width: 1000px;
   max-width: 1400px;
+  font-family: "Lora";
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Roboto Slab";
 }
 
 /* Layout */

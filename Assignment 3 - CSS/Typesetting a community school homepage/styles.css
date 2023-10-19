@@ -18,11 +18,16 @@
   font-style: normal;
 }
 
+html {
+  font-size: 62.5%; /* 62.5% of 16px, making it 10px */
+}
+
 body {
   margin: 0 auto;
   min-width: 1000px;
   max-width: 1400px;
   font-family: "Lora";
+  font-size: 1rem; /* 10px */
 }
 
 h1,
@@ -32,6 +37,19 @@ h4,
 h5,
 h6 {
   font-family: "Roboto Slab";
+}
+
+h1 {
+  font-family: "Roboto Slab", sans-serif;
+  font-size: 2rem; /* 20px */
+}
+
+h2 {
+  font-size: 1.5rem; /* 15px */
+}
+
+p {
+  font-size: 0.875rem; /* 8.75px */
 }
 
 /* Layout */

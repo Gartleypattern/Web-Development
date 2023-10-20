@@ -122,11 +122,11 @@ a:focus {
 }
 
 a:hover {
-  color: red;
+  color: green !important;
 }
 
 a:active {
-  color: #aa6666;
+  color: #aa6666 !important;
 }
 
 ul {
@@ -144,6 +144,16 @@ nav li {
   text-align: center;
   font-size: 15px;
   font-weight: bold;
+}
+
+nav li:hover {
+  background: #aa6666;
+  color: white;
+  cursor: pointer;
+}
+
+nav li:hover a {
+  color: white !important;
 }
 
 nav ul li a {

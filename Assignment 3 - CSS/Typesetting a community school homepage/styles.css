@@ -33,16 +33,6 @@ body {
   word-spacing: 2px;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: "Roboto Slab";
-  letter-spacing: 3px;
-}
-
 h1 {
   font-family: "Roboto Slab", sans-serif;
   font-size: 2rem; /* 20px */
@@ -56,37 +46,11 @@ p {
   font-size: 0.875rem; /* 8.75px */
 }
 
-a {
-  color: #007acc;
-}
-
-a:focus,
-a:hover {
-  text-decoration: none;
-}
-
-a:visited {
-  color: blue;
-}
-
-a:focus {
-  outline: none;
-  color: orange;
-}
-
-a:hover {
-  color: red;
-}
-
 /* Layout */
 
 section {
   float: left;
   width: 50%;
-}
-
-section p {
-  text-indent: 20px;
 }
 
 aside {
@@ -123,3 +87,44 @@ footer {
 }
 
 /* WRITE YOUR CODE BELOW HERE */
+
+section p {
+  text-indent: 20px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Roboto Slab";
+  letter-spacing: 3px;
+}
+
+a {
+  color: #007acc;
+}
+
+a:focus,
+a:hover {
+  text-decoration: none;
+}
+
+a:visited {
+  color: blue;
+}
+
+a:focus {
+  outline: none;
+  color: orange;
+  outline: none;
+}
+
+a:hover {
+  color: red;
+}
+
+a:active {
+  color: #aa6666;
+}

@@ -56,6 +56,24 @@ p {
   font-size: 0.875rem; /* 8.75px */
 }
 
+a {
+  color: #007acc;
+  text-decoration: none;
+}
+
+a:visited {
+  color: blue;
+}
+
+a:focus {
+  outline: none;
+  color: orange;
+}
+
+a:hover {
+  color: red;
+}
+
 /* Layout */
 
 section {

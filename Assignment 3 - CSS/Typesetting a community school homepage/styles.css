@@ -58,6 +58,10 @@ p {
 
 a {
   color: #007acc;
+}
+
+a:focus,
+a:hover {
   text-decoration: none;
 }
 

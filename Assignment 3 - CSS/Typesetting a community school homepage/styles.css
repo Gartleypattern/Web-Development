@@ -28,7 +28,7 @@ body {
   max-width: 1400px;
   font-family: "Lora";
   font-size: 1rem; /* 10px */
-  line-height: 1.5;
+  line-height: 2;
   letter-spacing: 1px;
   word-spacing: 2px;
 }
@@ -127,4 +127,18 @@ a:hover {
 
 a:active {
   color: #aa6666;
+}
+
+ul {
+  line-height: 2;
+  list-style-type: none;
+}
+
+ul li::before {
+  content: "";
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  background-color: #aa6666;
+  margin-right: 5px;
 }

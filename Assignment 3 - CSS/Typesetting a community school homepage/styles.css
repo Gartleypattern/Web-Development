@@ -63,6 +63,10 @@ section {
   width: 50%;
 }
 
+section p {
+  text-indent: 20px;
+}
+
 aside {
   float: left;
   width: 30%;

@@ -29,6 +29,8 @@ body {
   font-family: "Lora";
   font-size: 1rem; /* 10px */
   line-height: 1.5;
+  letter-spacing: 1px;
+  word-spacing: 2px;
 }
 
 h1,
@@ -38,6 +40,7 @@ h4,
 h5,
 h6 {
   font-family: "Roboto Slab";
+  letter-spacing: 3px;
 }
 
 h1 {
@@ -86,6 +89,7 @@ footer {
 header {
   text-align: center;
 }
+
 header,
 footer {
   border-top: 5px solid #a66;

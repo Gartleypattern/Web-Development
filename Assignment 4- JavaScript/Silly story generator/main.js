@@ -31,9 +31,20 @@ function result() {
   }
 
   if (document.getElementById("uk").checked) {
-    const weight = Math.round(300);
-    const temperature = Math.round(94);
+    const weightInPounds = 300;
+    const temperatureInFahrenheit = 94;
+
+    const weightInStone = Math.round(weightInPounds / 14);
+    const temperatureInCelsius = Math.round(
+      ((temperatureInFahrenheit - 32) * 5) / 9
+    );
+
     newStory = newStory.replace(/:inserty:/g, "the soup kitchen");
+    newStory = newStory.replace(
+      "94 fahrenheit",
+      temperatureInCelsius + " centigrade"
+    );
+    newStory = newStory.replace("300 pounds", weightInStone + " stone");
   }
 
   newStory = newStory.replace(/:insertx:/g, xItem);

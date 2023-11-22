@@ -16,25 +16,29 @@ const insertZ = [
   "melted into a puddle on the sidewalk",
   "turned into a slug and crawled away",
 ];
-randomize.addEventListener('click', result);
+randomize.addEventListener("click", result);
 
 function result() {
-  const newStory = storyText;
+  let newStory = storyText;
   const xItem = randomValueFromArray(insertX);
   const yItem = randomValueFromArray(insertY);
   const zItem = randomValueFromArray(insertZ);
 
-  if(customName.value !== '') {
+  if (customName.value !== "") {
     const name = customName.value;
-
+    newStory = newStory.replace(/:insertx:/g, name);
   }
 
-  if(document.getElementById("uk").checked) {
+  if (document.getElementById("uk").checked) {
     const weight = Math.round(300);
-    const temperature =  Math.round(94);
-
+    const temperature = Math.round(94);
+    newStory = newStory.replace(/:inserty:/g, "the soup kitchen");
   }
 
-  story.textContent = ;
-  story.style.visibility = 'visible';
+  newStory = newStory.replace(/:insertx:/g, xItem);
+  newStory = newStory.replace(/:inserty:/g, yItem);
+  newStory = newStory.replace(/:insertz:/g, zItem);
+
+  story.textContent = newStory;
+  story.style.visibility = "visible";
 }

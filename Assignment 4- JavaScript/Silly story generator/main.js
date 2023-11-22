@@ -27,6 +27,7 @@ function result() {
   if (customName.value !== "") {
     const name = customName.value;
     newStory = newStory.replace(/:insertx:/g, name);
+    newStory = newStory.replace(/Bob/g, name); // Replace 'Bob' with custom name
   }
 
   if (document.getElementById("uk").checked) {

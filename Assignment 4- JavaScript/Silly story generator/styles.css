@@ -1,6 +1,13 @@
 body {
   font-family: helvetica, sans-serif;
+}
+
+.box {
   width: 350px;
+  background: lightblue;
+  border: 1px solid black;
+  padding: 20px;
+  margin: 100px auto;
 }
 
 label {

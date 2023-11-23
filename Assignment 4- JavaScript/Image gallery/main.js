@@ -1,6 +1,5 @@
 const displayedImage = document.querySelector(".displayed-img");
 const thumbBar = document.querySelector(".thumb-bar");
-
 const btn = document.querySelector("button");
 const overlay = document.querySelector(".overlay");
 
@@ -16,7 +15,7 @@ const imageFilenames = [
 /* Declaring the alternative text for each image file */
 const imageAlt = [
   "Closeup of a human eye",
-  "ُSee waves",
+  "See waves",
   "Flowers",
   "Ancient painting",
   "Butterfly",
@@ -28,13 +27,13 @@ for (let i = 0; i < imageFilenames.length; i++) {
   newImage.setAttribute("src", imageFilenames[i]);
   newImage.setAttribute("alt", imageAlt[i]);
   thumbBar.appendChild(newImage);
-}
 
-// Add a click event listener to each thumbnail image
-newImage.addEventListener("click", function () {
-  displayedImage.setAttribute("src", imageFilenames[i]);
-  displayedImage.setAttribute("alt", imageAlt[i]);
-});
+  // Add a click event listener to each thumbnail image
+  newImage.addEventListener("click", function () {
+    displayedImage.setAttribute("src", imageFilenames[i]);
+    displayedImage.setAttribute("alt", imageAlt[i]);
+  });
+}
 
 /* Wiring up the Darken/Lighten button */
 btn.addEventListener("click", function () {

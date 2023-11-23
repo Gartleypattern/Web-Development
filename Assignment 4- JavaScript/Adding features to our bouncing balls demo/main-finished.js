@@ -1,18 +1,12 @@
-// set up canvas
-
 const canvas = document.querySelector("canvas");
 const ctx = canvas.getContext("2d");
 
 const width = (canvas.width = window.innerWidth);
 const height = (canvas.height = window.innerHeight);
 
-// function to generate random number
-
 function random(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
-
-// function to generate random RGB color value
 
 function randomRGB() {
   return `rgb(${random(0, 255)},${random(0, 255)},${random(0, 255)})`;
@@ -35,6 +29,7 @@ class Ball {
     this.velY = velY;
     this.color = color;
     this.size = size;
+    this.exists = true; // Added property to track existence
   }
 
   draw() {
@@ -73,7 +68,8 @@ class Ball {
         const distance = Math.sqrt(dx * dx + dy * dy);
 
         if (distance < this.size + ball.size) {
-          ball.color = this.color = randomRGB();
+          ball.exists = false;
+          this.color = randomRGB();
         }
       }
     }
@@ -146,12 +142,13 @@ class EvilCircle extends Shape {
 }
 
 const balls = [];
+const ballCountParagraph = document.getElementById("ballCount");
+
+let ballCount = 0;
 
 while (balls.length < 25) {
   const size = random(10, 20);
   const ball = new Ball(
-    // ball position always drawn at least one ball width
-    // away from the edge of the canvas, to avoid drawing errors
     random(0 + size, width - size),
     random(0 + size, height - size),
     random(-7, 7),
@@ -161,27 +158,34 @@ while (balls.length < 25) {
   );
 
   balls.push(ball);
+  ballCount++;
+  updateBallCount();
+}
+
+function updateBallCount() {
+  ballCountParagraph.textContent = `Ball count: ${ballCount}`;
 }
 
 function loop() {
   ctx.fillStyle = "rgba(0, 0, 0, 0.25)";
   ctx.fillRect(0, 0, width, height);
 
-  // Create EvilCircle instance
   const evilCircle = new EvilCircle(width / 2, height / 2);
 
-  // Draw and update EvilCircle
   evilCircle.draw();
   evilCircle.checkBounds();
   evilCircle.collisionDetect();
 
-  // Loop through every ball
-  for (const ball of balls) {
-    // Only call functions if the ball exists
+  for (let i = balls.length - 1; i >= 0; i--) {
+    const ball = balls[i];
     if (ball.exists) {
       ball.draw();
       ball.update();
       ball.collisionDetect();
+    } else {
+      balls.splice(i, 1);
+      ballCount--;
+      updateBallCount();
     }
   }
 

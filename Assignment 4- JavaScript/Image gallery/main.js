@@ -23,13 +23,17 @@ const imageAlt = [
 ];
 
 /* Looping through images */
-
-/* Looping through images */
 for (let i = 0; i < imageFilenames.length; i++) {
   const newImage = document.createElement("img");
   newImage.setAttribute("src", imageFilenames[i]);
   newImage.setAttribute("alt", imageAlt[i]);
   thumbBar.appendChild(newImage);
 }
+
+// Add a click event listener to each thumbnail image
+newImage.addEventListener("click", function () {
+  displayedImage.setAttribute("src", imageFilenames[i]);
+  displayedImage.setAttribute("alt", imageAlt[i]);
+});
 
 /* Wiring up the Darken/Lighten button */

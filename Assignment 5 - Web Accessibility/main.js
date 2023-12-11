@@ -55,3 +55,28 @@ function pauseAudio() {
   var audio = document.getElementsByTagName("audio")[0];
   audio.pause();
 }
+
+// Function to toggle the visibility of comments
+function toggleComments() {
+  var commentWrapper = document.querySelector(".comment-wrapper");
+  var showHideButton = document.querySelector(".show-hide");
+
+  // Toggle visibility of comments
+  commentWrapper.classList.toggle("comments-hidden");
+
+  // Update the aria-pressed attribute for accessibility
+  var isPressed = commentWrapper.classList.contains("comments-hidden");
+  showHideButton.setAttribute("aria-pressed", isPressed.toString());
+}
+
+// Event listener for the return key
+document
+  .querySelector(".show-hide")
+  .addEventListener("keydown", function (event) {
+    if (event.key === "Enter") {
+      toggleComments();
+    }
+  });
+
+// Event listener for click (for mouse users)
+document.querySelector(".show-hide").addEventListener("click", toggleComments);

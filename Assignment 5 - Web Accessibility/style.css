@@ -285,3 +285,7 @@ audio {
   text-align: right;
   margin-right: 1rem; /* Add margin for better spacing */
 }
+
+.comments-hidden {
+  display: none;
+}

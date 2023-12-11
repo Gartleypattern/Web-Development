@@ -45,3 +45,13 @@ function submitComment() {
   nameField.value = "";
   commentField.value = "";
 }
+
+function playAudio() {
+  var audio = document.getElementsByTagName("audio")[0];
+  audio.play();
+}
+
+function pauseAudio() {
+  var audio = document.getElementsByTagName("audio")[0];
+  audio.pause();
+}
